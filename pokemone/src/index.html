@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="flex b bg-blue-200 flex-col font-normal gap-4 justify-center items-center w-full min-h-screen"
+  >
+    <div
+      class="div bg-amber-200 hidden flex-col rounded-2xl shadow-2xl hover:scale-105 transition-all duration-150 w-2xs items-center px-2 py-4 sm:w-80"
+    >
+      <p class="self-end font-medium bg-amber-300 py-1 px-3 rounded-2xl">
+        HP <span class="text-xl hp self-end"></span>
+      </p>
+
+      <div class="w-3/5">
+        <img class="object-cover pic w-full" src="" alt="" />
+      </div>
+
+      <p class="mb-4 font-bold name"></p>
+      <div class="w-4/5 justify-center items-center flex mb-4">
+        <p class="px-3 type rounded py-1 bg-violet-400 text-white"></p>
+      </div>
+      <div class="flex px-4 w-full justify-between">
+        <label class="flex flex-col gap-2 items-center">
+          <p
+            class="font-medium att px-2 py-0.5 bg-amber-100 rounded shadow"
+          ></p>
+          <p class="font-medium">Attack</p> </label
+        ><label class="flex flex-col gap-2 items-center">
+          <p
+            class="font-medium px-2 py-0.5 bg-amber-100 rounded shadow def"
+          ></p>
+          <p class="font-medium">Defense</p> </label
+        ><label class="flex flex-col gap-2 items-center">
+          <p
+            class="font-medium px-2 py-0.5 bg-amber-100 rounded shadow spd"
+          ></p>
+          <p class="font-medium">Speed</p>
+        </label>
+      </div>
+    </div>
+    <div>
+      <h1 class="font-medium tct text-xl">
+        start serching to see pokemon...😁
+      </h1>
+    </div>
+    <button
+      class="px-4 py-1 btn bg-violet-400 text-white hover:bg-violet-500 transition-all duration-100 rounded shadow"
+    >
+      Generate Pokemone
+    </button>
+    <script src="js.js"></script>
+  </body>
+</html>
