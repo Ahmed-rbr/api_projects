@@ -14,7 +14,17 @@ const fetchWord = (input) => {
   fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${input.value}`, {
     headers: { Accept: "application/json" },
   })
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        show.style.display = "flex";
+        word.textContent = input.value;
+        mean.textContent = "No word found";
+        spill.textContent = "No word found";
+        play.style.display = "none";
+        throw new Error("Word not found");
+      }
+      return response.json();
+    })
     .then((data) => {
       if (data) {
         show.style.display = "flex";
@@ -34,8 +44,6 @@ const fetchWord = (input) => {
           firstDefinition?.example ||
           firstDefinition?.definition ||
           "No definition found";
-      } else {
-        show.innerHTML = "no word was found!";
       }
     });
 };
