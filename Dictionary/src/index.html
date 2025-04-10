@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="flex justify-center w-full min-h-screen h-full items-center bg-violet-300"
+  >
+    <div
+      class="bg-white sm:w-3/5 md:w-2/5 px-6 py-4 flex flex-col rounded shadow"
+    >
+      <div
+        class="flex sm:flex-row flex-col gap-4 mb-8 items-center justify-between"
+      >
+        <input
+          class="border-b-2 focus:outline-0 border-violet-400 p-2 px-4"
+          placeholder="enter your word..."
+          type="text"
+        />
+        <button class="text-white btn bg-violet-400 rounded px-4 py-1">
+          Search
+        </button>
+      </div>
+      <div class="show hidden w-10/12 mb-4 flex-col">
+        <div class="flex items-center justify-between">
+          <p class="font-bold word text-2xl"></p>
+          <audio id="word-audio" class="sound" src=""></audio>
+          <i
+            id="play"
+            class="fa-solid play hidden fa-volume-high text-gray-500 hover:text-blue-500 cursor-pointer"
+          ></i>
+        </div>
+        <p class="mb-3 text-gray-400">
+          <span class="type"></span> /<span class="spill"></span>/
+        </p>
+        <p class="mean text-gray-500 mb-3"></p>
+      </div>
+    </div>
+    <script src="js.js"></script>
+  </body>
+</html>
